@@ -2,15 +2,16 @@ package ass2ima2022;
 
 import java.util.Scanner;
 
-// not fixed
 public class Ass2_04 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
         int total = sc.nextInt();
-
+        String res = "";
+        
         int[] arrNum = new int[n];
+        String[] arrRes = new String[n];
 
         for (int i = 0; i < n; i++) {
             arrNum[i] = sc.nextInt();
@@ -26,9 +27,12 @@ public class Ass2_04 {
                 int y = j + 1;
 
                 if (num1 + num2 == total) {
-                    System.out.println(x + " " + y);
+                    res = x + " " + y;
                 }
             }
+            arrRes[i] = res;
         }
+
+        System.out.println(arrRes[arrRes.length -1]);
     }
 }
