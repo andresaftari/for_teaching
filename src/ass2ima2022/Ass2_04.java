@@ -8,31 +8,32 @@ public class Ass2_04 {
 
         int n = sc.nextInt();
         int total = sc.nextInt();
-        String res = "";
+        String hasil = "";
         
-        int[] arrNum = new int[n];
-        String[] arrRes = new String[n];
+        int[] arrAmsyong = new int[n];
+        String[] arrHasil = new String[n];
 
         for (int i = 0; i < n; i++) {
-            arrNum[i] = sc.nextInt();
+            arrAmsyong[i] = sc.nextInt();
         }
 
-        for (int i = 0; i < arrNum.length; i++) {
-            int num1 = arrNum[i];
-            
-            for (int j = i + 1; j < arrNum.length; j++) {
-                int num2 = arrNum[j];
+        for (int i = 0; i < arrAmsyong.length; i++) {
+            int number1 = arrAmsyong[i];
+
+            for (int j = i + 1; j < arrAmsyong.length; j++) {
+                int number2 = arrAmsyong[j];
 
                 int x = i + 1;
                 int y = j + 1;
 
-                if (num1 + num2 == total) {
-                    res = x + " " + y;
+                if (number1 + number2 == total) {
+                    hasil = x + " " + y;
                 }
             }
-            arrRes[i] = res;
+
+            arrHasil[i] = hasil;
         }
 
-        System.out.println(arrRes[arrRes.length -1]);
+        System.out.println(arrHasil[arrHasil.length - 1]);
     }
 }
