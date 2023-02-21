@@ -15,6 +15,10 @@ public class Ass2_03 {
             }
         }
 
+        // Gelas 1: isinya teh
+        // Gelas 2: isinya air
+        // Gelas penampung 
+
         for (int i = 0; i < matrix.length; i++) {
             // for loop to check each row
             for (int j = 0; j < matrix[i].length; j++) {

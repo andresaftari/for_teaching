@@ -7,7 +7,7 @@ public class Ass2_02 {
         Scanner sc = new Scanner(System.in);
         String text = sc.nextLine() + " ";
 
-        String newT = text.replaceAll("[AEIOUaeiou]" + "[BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz] ", " ");
-        System.out.println(newT);
+        String textBaru = text.replaceAll("[AIUEOaiueo]" + "[BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz] ", " ");
+        System.out.println(textBaru);
     }
 }
