@@ -9,7 +9,7 @@ class Hewan {
     var index = 0
 
     fun showBack() {
-        if (index <= hewan.size -1) index-- else index
+        if (index <= hewan.size -1) index-- else 5
 
         val text = when (index) {
             1 -> "Ini Bebek"
