@@ -1,3 +1,4 @@
+import random
 
 arr = [
     {'nim': 1301213433, 'name': 'Oka'},
