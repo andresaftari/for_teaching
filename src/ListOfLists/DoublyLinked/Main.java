@@ -74,30 +74,14 @@ public class Main {
     }
 
     private static void display() {
-        int opsi3;
-        do {
-            System.out.println("1. Play Lagu dari depan\n2. Play Lagu dari belakang\n3. Exit");
-            opsi3 = sc.nextInt();
+        ListIterator<Song> iter1 = list.listIterator();
 
-            switch (opsi3) {
-                case 1:
-                    ListIterator<Song> iter1 = list.listIterator();
+        while (iter1.hasNext()) {
+            System.out.println(iter1.next());
+        }
 
-                    while (iter1.hasNext()) {
-                        System.out.println(iter1.next());
-                    }
-                    break;
-                case 2:
-                    ListIterator<Song> iter2 = list.listIterator();
-
-                    while (iter2.hasPrevious()) {
-                        System.out.println(iter2.previous());
-                    }
-                    break;
-
-                default:
-                    return;
-            }
-        } while (true);
+        while (iter1.hasPrevious()) {
+            System.out.println(iter1.previous());
+        }
     }
 }

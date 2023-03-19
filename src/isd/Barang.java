@@ -1,9 +1,9 @@
 package isd;
 
-import org.jetbrains.annotations.NotNull;
 
 public class Barang implements Comparable<Barang> {
-    private String kode, jenis, nama;
+    private final String kode, jenis;
+    private String nama;
     int stok;
 
     public Barang(String kode, String jenis, String nama, int stok) {
@@ -27,13 +27,6 @@ public class Barang implements Comparable<Barang> {
         return kode;
     }
 
-    public String getJenis() {
-        return jenis;
-    }
-
-    public void setJenis(String jenis) {
-        this.jenis = jenis;
-    }
 
     public String getNama() {
         return nama;
@@ -43,16 +36,8 @@ public class Barang implements Comparable<Barang> {
         this.nama = nama;
     }
 
-    public int getStok() {
-        return stok;
-    }
-
-    public void setStok(int stok) {
-        this.stok = stok;
-    }
-
     @Override
-    public int compareTo(@NotNull Barang barang) {
+    public int compareTo(Barang o) {
         return 0;
     }
 }

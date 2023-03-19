@@ -6,19 +6,18 @@ def __rangefinder__(x: list[int], y: list[int]):
 
     min_range = math.sqrt((x[0] - x[1]) * (x[0] - x[1]) + (y[0] - y[1]) * (y[0] - y[1]))
 
-    for i in range(0, len(y) - 1):
+    for i in range(len(y) - 1):
         for j in range(i + 1, len(y)):
-            print(j)
-            known_range = math.sqrt((x[i] - x[j]) * (x[i] - x[j]) + (y[i] - y[j]) * (y[i] - y[j]))
+            jarak = math.sqrt((x[i] - x[j]) * (x[i] - x[j]) + (y[i] - y[j]) * (y[i] - y[j]))
 
-            if known_range < min_range:
-                min_range = known_range
+            if jarak < min_range:
+                min_range = jarak
                 x1 = x[i]
                 x2 = x[j]
                 y1 = y[i]
                 y2 = y[j]
 
-    print('min range:', min_range, 'at:', {x1, y1}, 'and', {x2, y2})
+    print("min range:" + str(min_range) + "on: " + str(x1) + "," + str(y1) + " " + str(x2) + "," + str(y2))
 
 
 if __name__ == '__main__':
