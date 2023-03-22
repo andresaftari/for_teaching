@@ -15,21 +15,23 @@ public class Main {
             char character = input.charAt(i);
 
             if (Character.isLetterOrDigit(character)) {
-                // karakter atau digit adalah highest priority
+                // karakter atau digit adalah highest priority, setiap huruf/alfabet atau digit harus adalah OPERAND
+                // yang harus ditampilkan sebelum OPERATOR
                 result.append(character);
             } else if (character == '(') {
                 // kalau ada buka kurung, langsung jadiin priority
                 stack.push(character);
             } else if (character == ')') {
-                // kalau ditemuin penutup kurung, semua yang di dalam kurung harus jadi priority sampai ketemu pembuka
-                // kurungnya
+                // kalau ditemuin penutup kurung, semua yang di dalam kurung harus jadi priority
                 while (!stack.isEmpty() && stack.peek() != '(') {
                     result.append(stack.peek());
                     stack.pop();
                 }
                 stack.pop();
             } else {
-                // kalau ternyata inputnya simbol aritmatika, buat priority sesuai dengan mathematic operators
+                // Kalau ternyata inputnya simbol aritmatika, buat priority sesuai dengan mathematic operators. Cara kerjanya,
+                // setiap ditemukan simbol aritmatika yang levelnya lebih kecil, simbol itu DI-PUSH ke dalam stack, sedangkan
+                // simbol yang lebih besar levelnya DI-POP
                 while (!stack.isEmpty() && setPriority(character) <= setPriority(stack.peek())) {
                     result.append(stack.peek());
                     stack.pop();
@@ -38,7 +40,8 @@ public class Main {
             }
         }
 
-        // Kalau semua syarat priority sudah dicek, sesuaikan outputnya sesuai priority
+        // Kalau semua syarat priority sudah dicek, tanda kurung buka ( harus dicek apakah ada penutupnya ) atau tidak, 
+        // kalau tidak maka output adalah INVALID
         while (!stack.isEmpty()) {
             if (stack.peek() == '(') {
                 System.out.println("Invalid");
