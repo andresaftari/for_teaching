@@ -19,13 +19,15 @@ public class Main {
 
             switch (option) {
                 case 1:
-                    System.out.println("Task name:");
+                    System.out.print("Task name: ");
                     addTask(br.readLine());
+//                    addTask(sc.nextLine());
                     break;
 
                 case 2:
                     System.out.println("Task name to be closed:");
                     removeTask(br.readLine());
+//                    removeTask(sc.nextLine());
                     break;
 
                 case 3:
