@@ -22,6 +22,10 @@ public class PraAses {
         insert(buku6);
         insert(buku7);
         insert(buku8);
+
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
     }
 
     private static void insert(Buku buku) {
