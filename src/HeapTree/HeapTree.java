@@ -12,88 +12,61 @@ public class HeapTree {
             int option = Integer.parseInt(br.readLine());
 
             switch (option) {
-                case 1:
-                    System.out.println("\nOriginal Tree : 23, 43, 12, 50, 5, 17, 8, 60, 11, 3");
+                case 1 -> {
+//                    System.out.println("\nOriginal Tree : 5, 8, 3");
                     System.out.print("\nMax Heap : ");
                     HeapTreeOps max = new HeapTreeOps(256, 0);
-
-                    max.insert(92);
-                    max.insert(79);
-                    max.insert(78);
-                    max.insert(40);
-                    max.insert(50);
-                    max.insert(54);
-                    max.insert(31);
-                    max.insert(19);
-                    max.insert(21);
-                    max.insert(7);
-                    max.insert(28);
-                    max.insert(25);
-                    max.insert(23);
-                    max.insert(17);
-                    max.insert(26);
-                    max.insert(83);
-
+                    max.insert(5);
+                    max.insert(8);
+                    max.insert(3);
+                    max.insert(9);
+                    max.insert(10);
                     max.displayHeap();
-                    break;
+                }
 
-                case 2:
-                    System.out.println("\nOriginal Tree : 23, 43, 12, 50, 5, 17, 8, 60, 11, 3");
+                case 2 -> {
+//                    System.out.println("\nOriginal Tree : 5, 8, 3");
                     System.out.print("\nMin Heap : ");
                     HeapTreeOps min = new HeapTreeOps(256, 1);
-
-                    min.insert(23);
-                    min.insert(43);
-                    min.insert(12);
-                    min.insert(50);
                     min.insert(5);
-                    min.insert(17);
                     min.insert(8);
-                    min.insert(60);
-                    min.insert(11);
                     min.insert(3);
-
+                    min.insert(9);
+                    min.insert(10);
                     min.displayHeap();
-                    break;
+                }
 
-                case 3:
+                case 3 -> {
                     HeapSort sortMax = new HeapSort();
                     System.out.println("\nHeapsort from Max-Heap: ");
-                    int[] insert = {23, 43, 12, 50, 5, 17, 8, 60, 11, 3};
+                    int[] insert = {5, 8, 3, 9, 10};
                     int len = insert.length;
-
                     System.out.print("Original Array : ");
                     sortMax.displayArray(insert);
-
                     System.out.println("Sorted with Acsending order : ");
                     sortMax.heapSortMax(insert, len);
                     sortMax.displayArray(insert);
-
                     System.out.println();
-                    break;
+                }
 
-                case 4:
+                case 4 -> {
                     HeapSort sortMin = new HeapSort();
-                    System.out.println("\nnHeapsort from Max-Heap: ");
-                    int[] inserts = {23, 43, 12, 50, 5, 17, 8, 60, 11, 3};
-
+                    System.out.println("\nnHeapsort from Min-Heap: ");
+                    int[] inserts = {5, 8, 3, 9, 10};
                     System.out.print("Original Array : ");
                     sortMin.displayArray(inserts);
-
                     System.out.println("Sorted with Descending order : ");
                     sortMin.heapSortMin(inserts);
                     sortMin.displayArrayMin(inserts);
-
                     System.out.println();
-                    break;
+                }
 
-                case 5:
+                case 5 -> {
                     System.out.println("Goodbye and stay safe!");
                     System.exit(0);
-                    break;
+                }
 
-                default:
-                    System.out.println("There is no option " + option);
+                default -> System.out.println("There is no option " + option);
             }
         }
         while (true);
@@ -229,7 +202,7 @@ class HeapSort {
         int onLeft = 2 * index + 1;
         int onRight = 2 * index + 2;
 
-        if (onLeft < len && arr[onLeft] > arr[largest] ) largest = onLeft;
+        if (onLeft < len && arr[onLeft] > arr[largest]) largest = onLeft;
         if (onRight < len && arr[onRight] > arr[largest]) largest = onRight;
         if (largest != index) {
             int swapper = arr[index];
@@ -256,8 +229,8 @@ class HeapSort {
     void displayArrayMin(int[] arr) {
         for (int i = 0; i < arr.length / 2; i++) {
             int container = arr[i];
-            arr[i]  = arr[arr.length -i -1];
-            arr[arr.length -i -1] = container;
+            arr[i] = arr[arr.length - i - 1];
+            arr[arr.length - i - 1] = container;
         }
         System.out.println(Arrays.toString(arr));
     }

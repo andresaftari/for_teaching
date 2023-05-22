@@ -1,6 +1,6 @@
 //package Semester3.Topik5.Lingkaran;
 //
-//public class Main {
+//public class BSTTTT.Main {
 //    static Lingkaran lingkaran1 = new Lingkaran(7f);
 //    static Lingkaran lingkaran2 = new Lingkaran(5.5f);
 //    static Lingkaran lingkaran3 = new Lingkaran(20.4);

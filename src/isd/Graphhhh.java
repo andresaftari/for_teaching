@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Graphhhh {
-    private Map<Character, ArrayList<Character>> graph = new HashMap<>();
+    private final Map<Character, ArrayList<Character>> graph = new HashMap<>();
 
     public static void main(String[] args) {
         Graphhhh res = new Graphhhh();
@@ -24,14 +24,14 @@ public class Graphhhh {
         res.addNode('I', 'F');
         res.addNode('C', 'B');
 
-        System.out.println("Adjacency List: " + res);
+        System.out.println("Adjacency List: \n" + res);
     }
 
     public void addNode(char start, char dest) {
-        if (!graph.containsKey(start)) graph.put(start, new ArrayList<>());
-        if (!graph.containsKey(dest)) graph.put(dest, new ArrayList<>());
+        if (!graph.containsKey(start)) graph.put(start, new ArrayList<>()); // node
+        if (!graph.containsKey(dest)) graph.put(dest, new ArrayList<>()); // node
 
-        graph.get(start).add(dest);
+        graph.get(start).add(dest); // edge
     }
 
     @Override
