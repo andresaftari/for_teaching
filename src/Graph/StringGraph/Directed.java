@@ -15,7 +15,6 @@ public class Directed {
         if (!graphMapper.containsKey(tujuan)) addVertexes(tujuan);
 
         graphMapper.get(asal).add(tujuan);
-        graphMapper.get(tujuan).add(asal);
     }
 
     @Override

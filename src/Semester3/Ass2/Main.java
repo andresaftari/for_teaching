@@ -1,5 +1,5 @@
 package Semester3.Ass2;/*
-* Main.java ini adalah driver class, yaitu class testing untuk menjalankan program prototipe aplikasi ini
+* BSTTTT.Main.java ini adalah driver class, yaitu class testing untuk menjalankan program prototipe aplikasi ini
 * Isi dari driver class adalah kumpulan aksi-aksi yang akan digunakan. Contohnya pada kelas ini ada 4 aksi, yaitu
 * Create (input user dan produk), Read (display user dan produk), Update (edit produk) dan Delete (delete produk)
 */
