@@ -14,7 +14,6 @@ public class DirectedDFS {
         System.out.print(startNode.name + " ");
 
         Queue<Node2> allAdjacents = graph.adjMap.get(startNode);
-
         if (allAdjacents == null) return;
 
         for (Node2 adjacent : allAdjacents) {

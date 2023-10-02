@@ -6,16 +6,12 @@ public class Directed {
     private final static Map<String, List<String>> graphMapper = new HashMap<>();
     StringBuilder output = new StringBuilder();
 
-    private static void addVertexes(String vertex) {
-        graphMapper.put(vertex, new LinkedList<>());
-    }
-
     private static void addEdges(String asal, String tujuan) {
-        if (!graphMapper.containsKey(asal)) addVertexes(asal);
-        if (!graphMapper.containsKey(tujuan)) addVertexes(tujuan);
+        if (!graphMapper.containsKey(asal)) graphMapper.put(asal, new LinkedList<>());
+        if (!graphMapper.containsKey(tujuan)) graphMapper.put(tujuan, new LinkedList<>());
 
         graphMapper.get(asal).add(tujuan);
-        graphMapper.get(tujuan).add(asal);
+//        graphMapper.get(tujuan).add(asal);
     }
 
     @Override
@@ -23,9 +19,7 @@ public class Directed {
         for (String vertex1 : graphMapper.keySet()) {
             output.append("Vertex ").append(vertex1).append(" -> ");
 
-            for (String vertex2 : graphMapper.get(vertex1)) {
-                output.append(vertex2).append(" ");
-            }
+            for (String vertex2 : graphMapper.get(vertex1)) output.append(vertex2).append(" ");
             output.append("\n");
         }
         return output.toString();

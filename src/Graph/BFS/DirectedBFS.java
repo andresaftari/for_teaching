@@ -16,7 +16,6 @@ public class DirectedBFS {
             if (nodes.isVisited) continue;
 
             Queue<Nodes> allAdjacent = graph.adjMap.get(nodes);
-
             nodes.visits();
 
             if (allAdjacent == null) {
