@@ -1,4 +1,4 @@
-package pbo.responsi46;
+package pbo.unused;
 
 public class Weapon {
     private String name, type;

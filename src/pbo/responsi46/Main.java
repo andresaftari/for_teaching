@@ -1,37 +1,25 @@
 package pbo.responsi46;
 
-import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
-        Game game = new Game();
-        game.joinTeam("Agent Alpha-01", "M4 CQBR", "AR", "MTF Alpha-1");
-        game.joinTeam("Agent Delta-44", "AS VAL", "AR", "MTF Zeta-4");
-        game.showAllTeam();
-    }
-}
+        Camera camera = new Camera("Canon", "EOS M100");
 
-class Game {
-    private GameSession session = new GameSession();
+        // Lens to Camera is COMPOSITION
+        camera.addCompatibleLens(new Lens("Canon RF 50mm f/1.8 STM", 50));
+        camera.addCompatibleLens(new Lens("Canon RF 10-24mm f/4L IS USM", 24));
 
-    public void joinTeam(String username, String weaponModel, String weaponType, String teamName) {
-        Squad squad = new Squad(teamName);
+        // ExternalComponent to Camera is AGGREGATION
+        ExternalComponent adapter = new ExternalComponent("Canon RF-EF adapter");
+        ExternalComponent exFlash = new ExternalComponent("Canon Speedlite Portable Flash");
+        camera.addExternalComponent(adapter);
+        camera.addExternalComponent(exFlash);
 
-        // bentuk Asosiasi
-        ArrayList<Weapon> weapons = new ArrayList<>();
-        Weapon weapon = new Weapon();
-        weapon.setName(weaponModel);
-        weapon.setType(weaponType);
-        weapons.add(weapon);
-
-        squad.addPlayer(new Player(username, weapons)); // bentuk Komposisi
-        session.addSquad(squad); // bentuk Agregasi
-    }
-
-    public void showAllTeam() {
-        System.out.println("List team yang bergabung dalam match:");
-        for (Squad team : session.getSquadList()) {
-            System.out.println(team);
-        }
+        // ExternalFilter to Camera is ASSOCIATION
+        ExternalFilter ndFilter = new ExternalFilter();
+        ndFilter.setType("ND-500 Filter");
+        ExternalFilter cplFilter = new ExternalFilter();
+        cplFilter.setType("Polarizer Filter");
+        camera.addExternalFilter(ndFilter);
+        camera.addExternalFilter(cplFilter);
     }
 }
