@@ -68,4 +68,6 @@ public class Team {
 
     public ArrayList<Analyst> getListAnalyst() {
         return listAnalyst;
+    }
+}
     
