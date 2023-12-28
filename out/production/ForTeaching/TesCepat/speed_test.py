@@ -10,4 +10,4 @@ for i in range(0, 5):
 e = time.time() * 1000
 
 # Print runtime
-print(f'{e - s} second')
+print(f'{e - s} microsecond')

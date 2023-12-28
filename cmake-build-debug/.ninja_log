@@ -1,0 +1,6 @@
+# ninja log v5
+2	323	1702821486174700655	CMakeFiles/for_teaching.dir/out/production/ForTeaching/paralel_omp.c.o	a1e22e0727d8103e
+5	323	1702821486174709447	CMakeFiles/for_teaching.dir/src/paralel_omp.c.o	c2aa7c194761e9f6
+0	359	1702821486217166541	CMakeFiles/for_teaching.dir/out/production/ForTeaching/Bebas/LatihanTLX/main.cpp.o	f0da75486b7e1b5a
+4	359	1702821486216667214	CMakeFiles/for_teaching.dir/src/Bebas/LatihanTLX/main.cpp.o	65724f2c0d3bb874
+2	1455	1702821487307993352	CMakeFiles/for_teaching.dir/src/semester3ekstensi/sister/tp14/coba_opencl.cpp.o	fa3228443dc615a4

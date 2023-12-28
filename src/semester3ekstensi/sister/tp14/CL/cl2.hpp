@@ -13,6 +13,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-
-#include <CL/opencl.hpp>
+# define CL_HPP_TARGET_OPENCL_VERSION 300
+#include "opencl.hpp"
 #pragma message("cl2.hpp has been renamed to opencl.hpp to make it clear that it supports all versions of OpenCL. Please include opencl.hpp directly.")
