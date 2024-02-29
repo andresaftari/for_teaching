@@ -8,8 +8,10 @@ function isPalindrome(str) {
     // (bisa pake for loop sih, cuma biar easy aja)
     const reversedStr = cleanedStr.split('').reverse().join('');
     
-    if (cleanedStr === reversedStr) return "eureeka!"; 
-    else return "suka blyat";
+    if (cleanedStr != '') {
+        if (cleanedStr === reversedStr) return "eureeka!"; 
+        else return "suka blyat";
+    }
 }
 
 // Minta inputan dari user

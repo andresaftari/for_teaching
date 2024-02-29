@@ -1,0 +1,4 @@
+{
+    "npm.enableRunFromFolder": true,
+    "python.analysis.autoImportCompletions": true
+}
