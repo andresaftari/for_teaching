@@ -15,8 +15,8 @@ public class LinkedList {
     // Tambah di awal
     public void addFirst(int data) {
         Node node = new Node(data);
-        node.next = head; 
-        // kasi tau program kalau setelah node sekarang 
+        node.next = head;
+        // kasi tau program kalau setelah node sekarang
         // adalah node "head"
 
         // jadi apapun Node yang ditambah di awal adalah head
@@ -25,7 +25,7 @@ public class LinkedList {
 
     public void addLast(int data) {
         Node node, temp;
-        
+
         node = new Node(data);
         node.next = null;
 
@@ -34,7 +34,7 @@ public class LinkedList {
             head.next = null;
         } else {
             temp = head;
-            while (head.next != null) {
+            while (temp.next != null) {
                 temp = temp.next;
             }
 
@@ -45,7 +45,7 @@ public class LinkedList {
     public Node deleteFirst() {
         if (!isEmpty()) {
             Node temp = head;
-            head = tail = head.next;
+            head = head.next;
 
             return temp;
         } else {
@@ -56,8 +56,8 @@ public class LinkedList {
     public Node deleteLast() {
         if (!isEmpty()) {
             Node temp, current;
-            current = head = tail;
-            
+            current = head;
+
             while (current.next.next != null) {
                 current = current.next;
             }
@@ -77,7 +77,8 @@ public class LinkedList {
     public void tampilkan() {
         Node current = head;
 
-        if (current == null) System.out.println("kosong");
+        if (current == null)
+            System.out.println("kosong");
         else {
             while (current != null) {
                 current.tampil();
