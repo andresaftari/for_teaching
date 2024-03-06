@@ -7,6 +7,7 @@ void main() {
     'bob': ['bob@gmail.com', 5555]
   };
 
+  print('username:');
   String? username = stdin.readLineSync();
   String? password = stdin.readLineSync();
 
@@ -17,6 +18,6 @@ void main() {
       print('username dan password salah');
     }
   } else {
-      print('username dan password salah');
-    }
+    print('username dan password salah');
+  }
 }
