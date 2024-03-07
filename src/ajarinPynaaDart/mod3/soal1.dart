@@ -16,7 +16,7 @@ class Pegawai {
 
   @override
   String toString() {
-    return 'NIP : $nip\nNama  :$nama\nJabatan : $jabatan\nGaji  : Rp. $gaji\n';
+    return 'NIP : $nip\nNama  : $nama\nJabatan : $jabatan\nGaji  : Rp. $gaji\n';
   }
 }
 
