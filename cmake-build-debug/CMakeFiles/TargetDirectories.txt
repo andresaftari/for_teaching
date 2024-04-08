@@ -1,3 +1,0 @@
-/Users/andresaftari/Development/Kuliah/Asprak/for_teaching/cmake-build-debug/CMakeFiles/for_teaching.dir
-/Users/andresaftari/Development/Kuliah/Asprak/for_teaching/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/andresaftari/Development/Kuliah/Asprak/for_teaching/cmake-build-debug/CMakeFiles/rebuild_cache.dir
