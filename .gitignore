@@ -3,3 +3,6 @@
 /src/ajarinPynaaDart
 .DS_STORE
 .vscode
+/out/
+/nbproject/
+/cmake-build-debug/
